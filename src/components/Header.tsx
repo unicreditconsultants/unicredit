@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -13,6 +13,18 @@ export default function Header() {
     setIsServicesOpen(false);
   };
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   const serviceLinks = [
     { name: "Business Loan", path: "/business-loan" },
     { name: "Overdraft", path: "/overdraft" },
@@ -23,7 +35,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white/85 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-50 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -83,7 +95,7 @@ export default function Header() {
                   Services
                   <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors" />
                 </Link>
-                <ul className="absolute left-0 top-full w-56 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                <ul className="absolute left-0 top-full mt-2 w-64 bg-white/95 backdrop-blur-xl border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
                   {serviceLinks.map((item) => (
                     <li key={item.path}>
                       <Link
@@ -127,7 +139,7 @@ export default function Header() {
 
       {/* Mobile Menu Fullscreen Overlay */}
       <div 
-        className={`md:hidden fixed inset-x-0 bottom-0 top-20 bg-white z-40 flex flex-col transition-all duration-300 ease-in-out ${
+        className={`md:hidden fixed left-0 right-0 top-[80px] h-[calc(100dvh-80px)] bg-white z-50 flex flex-col transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >

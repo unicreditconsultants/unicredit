@@ -53,11 +53,13 @@ export default function HeroSlider() {
           style={{ zIndex: 0 }}
         >
           {/* Dark overlay — above image, below interactive elements */}
-          <div className="absolute inset-0 bg-slate-900/60" style={{ zIndex: 1 }} />
+          <div className="absolute inset-0 bg-slate-950/60" style={{ zIndex: 1 }} />
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover object-center"
+            className={`w-full h-full object-cover object-center transition-transform duration-[10000ms] ease-out ${
+              index === currentSlide ? "scale-110" : "scale-100"
+            }`}
           />
         </div>
       ))}
