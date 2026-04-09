@@ -1,4 +1,5 @@
 import PageHeader from "../../components/PageHeader";
+import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 export const metadata = {
@@ -52,10 +53,12 @@ export default function Contact() {
             {/* Image / Banner */}
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
               <div className="h-full min-h-[320px] w-full rounded-2xl shadow-inner bg-slate-50 overflow-hidden relative">
-                <img
+                <Image
                   src="/asset/img/ceo.png"
                   alt="Get in Touch"
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>

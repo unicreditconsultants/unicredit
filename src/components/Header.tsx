@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
@@ -41,10 +42,13 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <img
+              <Image
                 src="/asset/img/logo.svg"
                 alt="Unicredit"
+                width={150}
+                height={40}
                 className="h-10 w-auto group-hover:scale-105 transition-transform duration-300"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
           </div>

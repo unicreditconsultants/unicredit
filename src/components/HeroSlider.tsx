@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SLIDES = [
@@ -54,10 +55,13 @@ export default function HeroSlider() {
         >
           {/* Dark overlay — above image, below interactive elements */}
           <div className="absolute inset-0 bg-slate-950/60" style={{ zIndex: 1 }} />
-          <img
+          <Image
             src={slide.image}
             alt={slide.title}
-            className={`w-full h-full object-cover object-center transition-transform duration-[10000ms] ease-out ${
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            className={`object-cover object-center transition-transform duration-[10000ms] ease-out ${
               index === currentSlide ? "scale-110" : "scale-100"
             }`}
           />
