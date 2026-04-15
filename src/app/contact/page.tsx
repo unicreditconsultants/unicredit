@@ -65,8 +65,8 @@ export default function Contact() {
           </div>
           
           {/* Contact Details Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex gap-6 bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="md:col-span-2 lg:col-span-1 flex gap-6 bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
               <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-blue-50 text-blue-600 border border-blue-100/50 rounded-2xl">
                 <MapPin className="w-6 h-6" />
               </div>
@@ -85,7 +85,7 @@ export default function Contact() {
               <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-blue-50 text-blue-600 border border-blue-100/50 rounded-2xl">
                 <Mail className="w-6 h-6" />
               </div>
-              <div className="text-slate-600 flex flex-col justify-center">
+              <div className="text-slate-600 flex flex-col">
                 <strong className="text-slate-900 block mb-1 text-base">Email Us</strong>
                 <a href="mailto:info@unicredit.co.in" className="hover:text-blue-600 transition-colors">info@unicredit.co.in</a>
               </div>
@@ -95,7 +95,7 @@ export default function Contact() {
               <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-blue-50 text-blue-600 border border-blue-100/50 rounded-2xl">
                 <Phone className="w-6 h-6" />
               </div>
-              <div className="text-slate-600 flex flex-col justify-center">
+              <div className="text-slate-600 flex flex-col">
                 <strong className="text-slate-900 block mb-1 text-base">Call Us</strong>
                 <a href="tel:8547726755" className="hover:text-blue-600 transition-colors">8547726755</a>
               </div>
