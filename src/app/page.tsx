@@ -4,7 +4,7 @@ import HeroSlider from "../components/HeroSlider";
 import { 
   Clock, Users, Headset, 
   Wallet, Car, Briefcase, Home as HomeIcon, CreditCard, Landmark,
-  MousePointerClick, FileText, CheckCircle, DollarSign, ArrowRight
+  MousePointerClick, FileText, CheckCircle, IndianRupee, ArrowRight
 } from "lucide-react";
 
 export default function Home() {
@@ -176,7 +176,7 @@ export default function Home() {
               { step: "1. Select Plan", icon: MousePointerClick, desc: "Determine your desired amount and customized repayment terms." },
               { step: "2. Submit Info", icon: FileText, desc: "Provide basic documentation securely through our digital portal." },
               { step: "3. Verification", icon: CheckCircle, desc: "Our analysts perform a rapid review to authorize your application." },
-              { step: "4. Get Funded", icon: DollarSign, desc: "Capital is disbursed directly to your designated account." }
+              { step: "4. Get Funded", icon: IndianRupee, desc: "Capital is disbursed directly to your designated account." }
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
