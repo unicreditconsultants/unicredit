@@ -43,7 +43,7 @@ export default function HeroSlider() {
   }, [nextSlide]);
 
   return (
-    <section className="relative bg-slate-900 text-white min-h-[calc(100dvh-80px)] flex items-center overflow-hidden">
+    <section className="relative bg-slate-900 text-white min-h-dvh flex items-center overflow-hidden">
       {/* Slide images — z-index 0 */}
       {SLIDES.map((slide, index) => (
         <div
