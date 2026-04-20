@@ -1,4 +1,5 @@
 import PageHeader from "../../components/PageHeader";
+import ApplyFormWrapper from "./ApplyFormWrapper";
 
 export const metadata = {
   title: "Apply Now - Unicredit",
@@ -19,7 +20,7 @@ export default function ApplyNow() {
                   <p className="text-slate-500">Provide your information securely below to check your eligibility.</p>
                 </div>
 
-                <form action="/api/apply" method="POST" className="space-y-8">
+                <ApplyFormWrapper>
 
                   {/* Personal Information */}
                   <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
@@ -177,13 +178,7 @@ export default function ApplyNow() {
                     </div>
                   </div>
 
-                  <div className="text-center pt-8 border-t border-slate-100">
-                    <button type="submit" className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-12 rounded-xl hover:bg-blue-700 shadow-lg shadow-blue-600/20 active:scale-95 transition-all text-sm tracking-widest uppercase">
-                      Submit Secure Application
-                    </button>
-                  </div>
-
-                </form>
+                </ApplyFormWrapper>
               </div>
             </div>
           </div>
