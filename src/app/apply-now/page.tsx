@@ -20,28 +20,6 @@ export default function ApplyNow() {
                 </div>
 
                 <form action="/api/apply" method="POST" className="space-y-8">
-                  {/* Financial Requirements Segment */}
-                  <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
-                    <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Financial Request</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="group relative">
-                        <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Loan Amount (₹) *</label>
-                        <input type="number" name="lamount" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-900 placeholder-slate-300" placeholder="e.g. 500000" />
-                      </div>
-                      <div className="group relative">
-                        <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Purpose of Loan *</label>
-                        <select name="porpuse_of_loan" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-600 appearance-none">
-                          <option value="">Select Purpose</option>
-                          <option value="Business">Business</option>
-                          <option value="Car Purchase">Car Purchase</option>
-                          <option value="Holiday">Holiday</option>
-                          <option value="Home Purchase">Home Purchase</option>
-                          <option value="Wedding ">Wedding </option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
 
                   {/* Personal Information */}
                   <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
@@ -95,8 +73,31 @@ export default function ApplyNow() {
                     </div>
                   </div>
 
-                  {/* Residence */}
+                  {/* Financial Requirements Segment */}
                   <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
+                    <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Financial Request</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="group relative">
+                        <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Loan Amount (₹) *</label>
+                        <input type="number" name="lamount" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-900 placeholder-slate-300" placeholder="e.g. 500000" />
+                      </div>
+                      <div className="group relative">
+                        <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Purpose of Loan *</label>
+                        <select name="porpuse_of_loan" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-600 appearance-none">
+                          <option value="">Select Purpose</option>
+                          <option value="Personal">Personal Loan</option>
+                          <option value="Car Loan">Car Loan</option>
+                          <option value="Business Loan">Business Loan</option>
+                          <option value="Home Loan">Home Loan</option>
+                          <option value="Overdraft Facility">Overdraft Facility</option>
+                          <option value="Loan Against Property">Loan Against Property</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Residence */}
+                  {/* <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
                     <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Residential Details</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="group relative">
@@ -135,7 +136,7 @@ export default function ApplyNow() {
                         </select>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Employer */}
                   <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
@@ -165,9 +166,13 @@ export default function ApplyNow() {
                         <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Work Phone *</label>
                         <input type="tel" name="employer_work_phone" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-900 placeholder-slate-300" placeholder="+91 9876543210" />
                       </div>
-                      <div className="group relative md:col-span-2">
+                      <div className="group relative">
                         <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Monthly Income (₹) *</label>
                         <input type="number" name="month_income" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-900 placeholder-slate-300" placeholder="e.g. 50000" />
+                      </div>
+                      <div className="group relative">
+                        <label className="block text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">Existing Loan EMIs</label>
+                        <input type="number" name="existing_loan_emi" required className="w-full px-5 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-slate-900 placeholder-slate-300" placeholder="e.g. 5000" />
                       </div>
                     </div>
                   </div>

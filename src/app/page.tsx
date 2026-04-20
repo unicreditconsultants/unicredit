@@ -8,6 +8,45 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const loans = [
+    {
+      title: "Personal Loan",
+      desc: "Unsecured personal loans with flexible terms tailored to your individual needs.",
+      icon: Wallet,
+      link: "/personal-loan"
+    },
+    {
+      title: "Car Loan",
+      desc: "Get behind the wheel faster using our competitive automotive financing options.",
+      icon: Car,
+      link: "/car-loan"
+    },
+    {
+      title: "Business Loan",
+      desc: "Strategic capital designed to help expand your enterprise or launch your next venture.",
+      icon: Briefcase,
+      link: "/business-loan"
+    },
+    {
+      title: "Home Loan",
+      desc: "Make your dream home a reality with stress-free and reliable property financing.",
+      icon: HomeIcon,
+      link: "/home-loan"
+    },
+    {
+      title: "Overdraft Facility",
+      desc: "Navigate business cash flows smoothly with our flexible business credit limits.",
+      icon: CreditCard,
+      link: "/overdraft"
+    },
+    {
+      title: "Loan Against Property",
+      desc: "Unlock the value of your real estate to secure substantial corporate or personal funds.",
+      icon: Landmark,
+      link: "/loanagainstproperty"
+    }
+  ]
+
   return (
     <>
       <HeroSlider />
@@ -58,44 +97,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Personal Loan",
-                desc: "Unsecured personal loans with flexible terms tailored to your individual needs.",
-                icon: Wallet,
-                link: "/personal-loan"
-              },
-              {
-                title: "Car Loan",
-                desc: "Get behind the wheel faster using our competitive automotive financing options.",
-                icon: Car,
-                link: "/car-loan"
-              },
-              {
-                title: "Business Loan",
-                desc: "Strategic capital designed to help expand your enterprise or launch your next venture.",
-                icon: Briefcase,
-                link: "/business-loan"
-              },
-              {
-                title: "Home Loan",
-                desc: "Make your dream home a reality with stress-free and reliable property financing.",
-                icon: HomeIcon,
-                link: "/home-loan"
-              },
-              {
-                title: "Overdraft Facility",
-                desc: "Navigate business cash flows smoothly with our flexible business credit limits.",
-                icon: CreditCard,
-                link: "/overdraft"
-              },
-              {
-                title: "Loan Against Property",
-                desc: "Unlock the value of your real estate to secure substantial corporate or personal funds.",
-                icon: Landmark,
-                link: "/loanagainstproperty"
-              }
-            ].map((loan, idx) => {
+            {loans.map((loan, idx) => {
               const Icon = loan.icon;
               return (
                 <div key={idx} className="group bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/5 hover:-translate-y-2 transition-all duration-300">
@@ -105,7 +107,7 @@ export default function Home() {
                   <h4 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">{loan.title}</h4>
                   <p className="text-slate-500 mb-8 line-clamp-3 leading-relaxed">{loan.desc}</p>
                   <Link href={loan.link} className="text-blue-600 font-bold hover:text-blue-800 inline-flex items-center group/link">
-                    Explore Option
+                    Read more
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -127,8 +129,8 @@ export default function Home() {
             Checking your loan options <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">does not affect</span> your credit score.
           </h2>
-          <Link href="/apply-now" className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1 transition-all duration-300 text-lg">
-            Apply For a Free Consultation
+          <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded-full hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1 transition-all duration-300 text-lg">
+            Contact Us for a Free Consultation
           </Link>
         </div>
       </section>

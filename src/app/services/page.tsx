@@ -89,7 +89,7 @@ export default function Services() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-blue-600/30 p-8 md:p-12 rounded-3xl backdrop-blur-md border border-blue-400/20">
             <div className="w-full md:w-2/3">
-              <h4 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">Ready to verify your eligibility?</h4>
+              <h4 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">Apply now to check your eligibility</h4>
               <p className="text-blue-100 text-lg">Checking your loan options is completely free and does not impact your credit score.</p>
             </div>
             <div className="w-full md:w-1/3 text-left md:text-right">
