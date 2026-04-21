@@ -197,8 +197,8 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.redirect(new URL('/thank-you', request.url));
+    return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.redirect(new URL('/apply-now?error=1', request.url));
+    return NextResponse.json({ success: false, error: "Failed to submit application" }, { status: 500 });
   }
 }
