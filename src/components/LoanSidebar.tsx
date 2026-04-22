@@ -29,7 +29,7 @@ export default function LoanSidebar() {
       </div>
 
       {/* Brochures */}
-      <div className="bg-slate-900 rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-900/10 border border-slate-800">
+      {/* <div className="bg-slate-900 rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-900/10 border border-slate-800">
         <h4 className="text-xl font-extrabold text-white mb-6 tracking-tight">Brochures</h4>
         <div className="space-y-4">
           <a href="#" className="flex items-center gap-4 bg-slate-800/50 p-4 rounded-2xl hover:bg-slate-800 transition-colors group">
@@ -51,7 +51,7 @@ export default function LoanSidebar() {
             </div>
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* Get in Touch */}
       <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-6 md:p-8 shadow-xl shadow-blue-600/20 text-white relative overflow-hidden">
