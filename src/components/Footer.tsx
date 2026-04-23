@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-slate-950 text-white py-16 border-t border-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <div className="mb-4">
               <div style={{ position: "relative", width: "160px", height: "40px" }}>
                 <Image src="/asset/img/footer-logo.png" alt="Unicredit" fill sizes="160px" style={{ objectFit: "contain", objectPosition: "left" }} />
@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+          <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <h4 className="text-lg font-bold mb-6 text-white tracking-wide">Solutions</h4>
             <ul className="space-y-3">
               <li><Link href="/business-loan" className="text-slate-400 hover:text-blue-400 transition-colors">Business Loan</Link></li>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
           
           {/* Third column if needed, keeping symmetric or based on layout. Legacy had some commented out recent posts. We'll leave it simple. */}
-          <div className="w-full md:w-1/3 px-4">
+          {/* <div className="w-full md:w-1/3 px-4">
             <h4 className="text-lg font-bold mb-6 text-white tracking-wide">Newsletter</h4>
             <div className="mb-4">
               <p className="text-slate-400 text-sm mb-6 max-w-sm">Subscribe to our newsletter and get the latest news related to loans, interest rates, and financial advice.</p>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <button type="submit" className="bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-500 active:scale-95 transition-all w-full text-center shadow-lg shadow-blue-900/20">Subscribe Now</button>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
